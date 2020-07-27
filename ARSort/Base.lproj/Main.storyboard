@@ -1,37 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARSort" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                             </arscnView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="g8h-gw-UzF">
+                                <rect key="frame" x="269" y="1017" width="272" height="32"/>
+                                <segments>
+                                    <segment title="Bubble sort"/>
+                                    <segment title="QuickSort"/>
+                                    <segment title="InsertSort"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zoi-6Q-DME">
+                                <rect key="frame" x="377.5" y="965" width="55" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startButtonPress:" destination="BV1-FR-VrT" eventType="touchUpInside" id="1Ik-4q-szC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session info: xxxxxxxxx" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCv-hy-N4m">
+                                <rect key="frame" x="316" y="105" width="178.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jul-iO-Cr3">
+                                <rect key="frame" x="375" y="40" width="60" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="reset"/>
+                                <connections>
+                                    <action selector="resetButtonPress:" destination="BV1-FR-VrT" eventType="touchUpInside" id="6Ph-ZP-3me"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="Jul-iO-Cr3" secondAttribute="bottom" constant="-86" id="5nL-aU-pei"/>
+                            <constraint firstItem="zoi-6Q-DME" firstAttribute="centerX" secondItem="U0K-SW-4ec" secondAttribute="centerX" id="GNo-Kr-w1B"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
+                            <constraint firstItem="wCv-hy-N4m" firstAttribute="centerX" secondItem="U0K-SW-4ec" secondAttribute="centerX" id="IdN-oy-3No"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="zoi-6Q-DME" secondAttribute="bottom" constant="71" id="KGE-NF-AjN"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="g8h-gw-UzF" secondAttribute="bottom" constant="32" id="Sqb-Cz-Khb"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
+                            <constraint firstItem="g8h-gw-UzF" firstAttribute="centerX" secondItem="BrB-h1-WRS" secondAttribute="centerX" id="Ynn-PJ-Sya"/>
+                            <constraint firstItem="g8h-gw-UzF" firstAttribute="centerX" secondItem="U0K-SW-4ec" secondAttribute="centerX" id="a7g-Qu-7DT"/>
+                            <constraint firstItem="wCv-hy-N4m" firstAttribute="centerX" secondItem="U0K-SW-4ec" secondAttribute="centerX" id="jMW-Qf-hfg"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="wCv-hy-N4m" secondAttribute="bottom" constant="-126" id="jb6-xs-R7o"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
+                            <constraint firstItem="Jul-iO-Cr3" firstAttribute="centerX" secondItem="U0K-SW-4ec" secondAttribute="centerX" id="tP6-o7-CPf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                     </view>
                     <connections>
+                        <outlet property="algorithmChooseView" destination="g8h-gw-UzF" id="nQu-ZR-yTK"/>
+                        <outlet property="infoLabel" destination="wCv-hy-N4m" id="Zii-8t-n2Z"/>
+                        <outlet property="resetButton" destination="Jul-iO-Cr3" id="S2e-NZ-oiN"/>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                        <outlet property="startButton" destination="zoi-6Q-DME" id="nV3-6e-1jY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>

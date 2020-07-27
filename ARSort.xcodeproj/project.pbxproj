@@ -13,6 +13,8 @@
 		A0EFEBCF24C9D99200B2E352 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0EFEBCD24C9D99200B2E352 /* Main.storyboard */; };
 		A0EFEBD124C9D99400B2E352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0EFEBD024C9D99400B2E352 /* Assets.xcassets */; };
 		A0EFEBD424C9D99400B2E352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0EFEBD224C9D99400B2E352 /* LaunchScreen.storyboard */; };
+		A0F7258424CACC420064A1FD /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F7258324CACC420064A1FD /* Sort.swift */; };
+		A0F7258624CAD17A0064A1FD /* Semphore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F7258524CAD17A0064A1FD /* Semphore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		A0EFEBD024C9D99400B2E352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0EFEBD324C9D99400B2E352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0EFEBD524C9D99400B2E352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0F7258324CACC420064A1FD /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
+		A0F7258524CAD17A0064A1FD /* Semphore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Semphore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				A0EFEBD024C9D99400B2E352 /* Assets.xcassets */,
 				A0EFEBD224C9D99400B2E352 /* LaunchScreen.storyboard */,
 				A0EFEBD524C9D99400B2E352 /* Info.plist */,
+				A0F7258324CACC420064A1FD /* Sort.swift */,
+				A0F7258524CAD17A0064A1FD /* Semphore.swift */,
 			);
 			path = ARSort;
 			sourceTree = "<group>";
@@ -139,8 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0F7258624CAD17A0064A1FD /* Semphore.swift in Sources */,
 				A0EFEBCC24C9D99200B2E352 /* ViewController.swift in Sources */,
 				A0EFEBC824C9D99200B2E352 /* AppDelegate.swift in Sources */,
+				A0F7258424CACC420064A1FD /* Sort.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
